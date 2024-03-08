@@ -6,6 +6,22 @@
 *.md diff=markdown
 *.php diff=php
 
+*.css linguist-language=CSS
+*.js linguist-language=JavaScript
+
+# Livewire files
+resources/views/livewire/* linguist-language=HTML
+app/Http/Livewire/* linguist-language=PHP
+
+# Laravel Blade files
+resources/views/* linguist-language=Blade
+
+# Alpine.js files
+public/js/alpine.js linguist-language=JavaScript
+
+# DaisyUI files
+resources/css/* linguist-language=CSS
+
 /.github export-ignore
 CHANGELOG.md export-ignore
 .styleci.yml export-ignore
