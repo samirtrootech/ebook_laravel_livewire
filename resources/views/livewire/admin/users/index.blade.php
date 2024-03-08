@@ -37,11 +37,15 @@
               @endif
             </td>
             <th>
-              <a class="btn btn-ghost btn-xs" href="{{ route('admin.users.edit', ['user' => $user->uuid]) }}"
+              <a class="btn btn-ghost btn-xs" data-tooltip="Favorite Books" href="{{ route('admin.users.fav.books', ['user' => $user->uuid]) }}"
+                wire:navigate>
+                <span class="material-symbols-outlined">favorite</span>
+              </a>
+              <a class="btn btn-ghost btn-xs" data-tooltip="Edit User" href="{{ route('admin.users.edit', ['user' => $user->uuid]) }}"
                 wire:navigate>
                 <span class="material-symbols-outlined">edit</span>
               </a>
-              <button class="btn btn-ghost btn-xs" wire:click="delete('{{ $user->uuid }}')"
+              <button class="btn btn-ghost btn-xs" data-tooltip="Delete User" wire:click="delete('{{ $user->uuid }}')"
                 wire:confirm="Are you sure you want to delete this user?">
                 <span class="material-symbols-outlined">delete</span>
               </button>

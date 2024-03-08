@@ -6,6 +6,7 @@ use App\Livewire\Admin\Books\Index as AdminBooks;
 use App\Livewire\Admin\Users\Index as Users;
 use App\Livewire\Admin\Users\Create as CreateUser;
 use App\Livewire\Admin\Users\Edit as EditUser;
+use App\Livewire\Admin\Users\FavBooks;
 use App\Livewire\Auth\ForgotPassword;
 use App\Livewire\Auth\Login;
 use App\Livewire\Auth\ResetPassword;
@@ -47,6 +48,7 @@ Route::middleware(['auth', 'adminCheck'])->prefix('admin')->group(function () {
         Route::get("/", Users::class)->name('admin.users');
         Route::get("/create", CreateUser::class)->name('admin.users.create');
         Route::get("/edit/{user}", EditUser::class)->name('admin.users.edit');
+        Route::get("/fav-books/{user}", FavBooks::class)->name('admin.users.fav.books');
     });
 });
 

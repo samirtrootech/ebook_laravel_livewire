@@ -11,8 +11,6 @@
 ## Installation
 
 
-
-
 1. Run Composer Install
     ```
     composer install
@@ -29,23 +27,29 @@
     ```
     npm run dev
     ```
-5. Run Migration and Seeding
+5. Link Storage
+    ```
+    php artisan storage:link
+	```
+6. Run Migration and Seeding
     ```
     php artisan migrate:fresh --seed
     ```
-6. Run the server (Optional)
+7. Run the server (Optional)
     ```
     php artisan serve
     ```
-7.  Open the browser and go to http://localhost:8000
+8.  Open the browser and go to http://localhost:8000
 
 ## Email Verification
 
 Use email testing like [Mailpit](https://github.com/axllent/mailpit) (local), [Mailtrap](https://mailtrap.io/) (online), etc for testing local user email verification.
 
 ## Demo
-User : user.example@mail.com - password
+User : user.example@mail.com  
+Password : password
 
-Admin : admin.example@mail.com - password
+Admin : admin.example@mail.com  
+Password: password
 
 

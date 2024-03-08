@@ -32,6 +32,7 @@ class Edit extends Component
         }
         $this->user = $user;
     }
+
     public function save()
     {
         $save = $this->form->store($this->user);
