@@ -16,7 +16,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   @vite(['resources/css/app.css', 'resources/js/app.js'])
-  <title>{{ $title ?? 'Page Title' }}</title>
+  <title>{{ $title ?? 'Books' }}</title>
   <style>
     html {
       font-family: 'Inter', sans-serif !important
