@@ -17,9 +17,11 @@ class Index extends Component
 
     public bool $isEditModalOpen = false;
 
+    public string $search = '';
+
     public function render()
     {
-        $books = ModelsBooks::orderBy("created_at", 'desc')->paginate(10);
+        $books = ModelsBooks::filter($this->search)->orderBy("created_at", 'desc')->paginate(10);
         return view('livewire.admin.books.index')->withBooks($books);
     }
 
