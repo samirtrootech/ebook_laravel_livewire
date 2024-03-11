@@ -40,14 +40,18 @@
                         </td>
                         <td>{{ $book->price }}</td>
                         <th>
-                            <a class="btn btn-ghost btn-xs"
-                                href="{{ route('admin.books.edit', ['book' => $book->uuid]) }}" wire:navigate>
-                                <span class="material-symbols-outlined">edit</span>
-                            </a>
-                            <button class="btn btn-ghost btn-xs" wire:click="delete('{{ $book->uuid }}')"
-                                wire:confirm="Are you sure you want to delete this book?">
-                                <span class="material-symbols-outlined">delete</span>
-                            </button>
+                            <div class="tooltip" data-tip="Edit Book">
+                                <a class="btn btn-ghost btn-xs"
+                                    href="{{ route('admin.books.edit', ['book' => $book->uuid]) }}" wire:navigate>
+                                    <span class="material-symbols-outlined">edit</span>
+                                </a>
+                            </div>
+                            <div class="tooltip" data-tip="Delete Book">
+                                <button class="btn btn-ghost btn-xs" wire:click="delete('{{ $book->uuid }}')"
+                                    wire:confirm="Are you sure you want to delete this book?">
+                                    <span class="material-symbols-outlined">delete</span>
+                                </button>
+                            </div>
                         </th>
                     </tr>
                 @endforeach
