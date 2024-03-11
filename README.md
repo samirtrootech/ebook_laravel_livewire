@@ -52,4 +52,8 @@ Password : password
 Admin : admin.example@mail.com  
 Password: password
 
+## Note:
+```
+If new user is created by admin then by default the password will be "password".
+```
 
